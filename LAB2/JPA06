@@ -1,20 +1,38 @@
-public class Hello {
+import java.util.Scanner;
+
+public class JPA06 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-
-        while (true) {
-            System.out.print("Input an integer: ");
-            int number = scanner.nextInt();
+       
+        System.out.println("請輸入國文分數：");
+        int chinese = scanner.nextInt();
+        System.out.println("請輸入英文分數：");
+        int english = scanner.nextInt();
+        System.out.println("請輸入數學分數：");
+        int math = scanner.nextInt();
 
   
+        boolean failed = false;
+        if (chinese < 60) {
+            System.out.println("國文不及格");
+            failed = true;
+        }
+        if (english < 60) {
+            System.out.println("英文不及格");
+            failed = true;
+        }
+        if (math < 60) {
+            System.out.println("數學不及格");
+            failed = true;
+        }
 
-            if (number % 2 == 0 && number % 3 == 0 && number % 6 == 0 && number % 9 == 0) {
-                System.out.println("The number is divisible by 2, 3, 6, and 9.");
-            } else {
-                System.out.println("The number is not divisible by 2, 3, 6, and 9.");
-            }
+        // 輸出結果
+        if (failed) {
+            System.out.println("總成績不及格");
+        } else {
+            System.out.println("總成績及格");
         }
     }
 }
