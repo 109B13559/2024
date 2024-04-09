@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Hello {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("輸入第1組的x和y座標:");
+        int x1 = scanner.nextInt();
+        int y1 = scanner.nextInt();
+
+        System.out.println("輸入第2組的x和y座標:");
+        int x2 = scanner.nextInt();
+        int y2 = scanner.nextInt();
+
+        double distance = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+
+        System.out.println("兩組座標之間的距離為: " + distance);
+    }
