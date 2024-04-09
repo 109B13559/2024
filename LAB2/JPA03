@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Hello {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // 輸入一個數字
+        System.out.print("Input a number: ");
+        int number = scanner.nextInt();
+
+        // 判斷奇偶數
+        if (number % 2 == 0) {
+            System.out.println(number + " 是偶數");
+        } else {
+            System.out.println(number + " 是奇數");
+        }
+    }
+}
