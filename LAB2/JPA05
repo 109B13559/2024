@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Hello {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // 輸入一個數字
+        System.out.print("Input a number: ");
+        int number = scanner.nextInt();
+
+        // 判斷是否為 2、3、6 的倍數
+        boolean isMultiple = isMultiple(number);
+
+        // 輸出結果
+        if (isMultiple) {
+            System.out.println(number + " 是 2、3、6 的倍數");
+        } else {
+            System.out.println(number + " 不是 2、3、6 的倍數");
+        }
+    }
+
+    private static boolean isMultiple(int number) {
+        return number % 2 == 0 && number % 3 == 0 && number % 6 == 0;
+    }
+}
