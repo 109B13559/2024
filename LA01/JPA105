@@ -1,20 +1,24 @@
 import java.util.Scanner;
 
-public class Hello {
+public class JPA105 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("請輸入一個字元:");
-        char ch = scanner.next().charAt(0);
+        // 輸入存錢筒中各類硬幣的數量
+        System.out.println("請輸入 1 元硬幣的數量：");
+        int oneYuan = scanner.nextInt();
+        System.out.println("請輸入 5 元硬幣的數量：");
+        int fiveYuan = scanner.nextInt();
+        System.out.println("請輸入 10 元硬幣的數量：");
+        int tenYuan = scanner.nextInt();
+        System.out.println("請輸入 50 元硬幣的數量：");
+        int fiftyYuan = scanner.nextInt();
 
-        boolean isLowerCase = ch >= 'a' && ch <= 'z';
+        // 計算存錢筒中的總金額
+        int totalAmount = oneYuan * 1 + fiveYuan * 5 + tenYuan * 10 + fiftyYuan * 50;
 
-        if (isLowerCase) {
-            System.out.println("是小寫字母");
-        } else {
-            System.out.println("不是小寫字母");
-        }
+        // 輸出結果
+        System.out.println("存錢筒中的總金額為：" + totalAmount);
     }
-
 }
