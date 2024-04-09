@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Hello {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("請輸入一個字元:");
+        char ch = scanner.next().charAt(0);
+
+        boolean isLowerCase = ch >= 'a' && ch <= 'z';
+
+        if (isLowerCase) {
+            System.out.println("是小寫字母");
+        } else {
+            System.out.println("不是小寫字母");
+        }
+    }
+
+}
