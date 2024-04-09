@@ -1,19 +1,22 @@
 import java.util.Scanner;
 
-public class Hello
- {
+public class Hello {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("請輸入一個字元:");
-        char ch = scanner.next().charAt(0);
+        // 輸入商品價格
+        System.out.println("請輸入商品價格：");
+        double price = scanner.nextDouble();
 
-        boolean isWhitespace = Character.isWhitespace(ch);
+        // 輸入折扣
+        System.out.println("請輸入折扣：");
+        double discount = scanner.nextDouble();
 
-        if (isWhitespace) {
-            System.out.println("是空白字元");
-        } else {
-            System.out.println("不是空白字元");
-        }
+        // 計算折扣後價格
+        double discountedPrice = price * (1 - discount);
+
+        // 輸出結果
+        System.out.println("折扣後價格為：" + discountedPrice);
     }
+}
