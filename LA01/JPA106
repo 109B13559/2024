@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Hello
+ {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("請輸入一個字元:");
+        char ch = scanner.next().charAt(0);
+
+        boolean isWhitespace = Character.isWhitespace(ch);
+
+        if (isWhitespace) {
+            System.out.println("是空白字元");
+        } else {
+            System.out.println("不是空白字元");
+        }
+    }
