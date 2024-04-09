@@ -1,22 +1,19 @@
-import java.util.Scanner;
-
 public class Hello {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+  public static double f(double x) {
+    return 3 * Math.pow(x, 3) + 2 * x - 1;
+  }
 
-        // 輸入商品價格
-        System.out.println("請輸入商品價格：");
-        double price = scanner.nextDouble();
+  public static void main(String[] args) {
+    // 計算 f(-3.2)、f(-2.1) 和 f(2.1) 的值
+    double[] values = new double[3];
+    values[0] = f(-3.2);
+    values[1] = f(-2.1);
+    values[2] = f(2.1);
 
-        // 輸入折扣
-        System.out.println("請輸入折扣：");
-        double discount = scanner.nextDouble();
-
-        // 計算折扣後價格
-        double discountedPrice = price * (1 - discount);
-
-        // 輸出結果
-        System.out.println("折扣後價格為：" + discountedPrice);
+    // 輸出計算結果
+    for (int i = 0; i < values.length; i++) {
+      System.out.printf("f(%f) = %.4f\n", -3.2 + 1.1 * i, values[i]);
     }
+  }
 }
