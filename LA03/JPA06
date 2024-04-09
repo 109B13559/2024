@@ -1,0 +1,23 @@
+public class Hello {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("請輸入 m 和 n：");
+            int m = scanner.nextInt();
+            int n = scanner.nextInt();
+
+            if (m == 999) {
+                break;
+            }
+
+            int result = 1;
+            for (int i = 1; i <= n; i++) {
+                result *= m;
+            }
+
+            System.out.println("m 的 n 次方為：" + result);
+        }
+    }
+}
