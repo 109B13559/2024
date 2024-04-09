@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Hello {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        int mealCount = 0;
+        double totalCost = 0.0;
+
+        
+        System.out.print("Please enter meal dollars or enter-1 to stop: ");
+        double mealCost = scanner.nextDouble();
+
+        
+        while (mealCost != -1) {
+            mealCount++;
+            totalCost += mealCost;
+
+            
+            System.out.print("Please enter meal dollars or enter-1 to stop: ");
+            mealCost = scanner.nextDouble();
+        }
+
+        
+        double averageCost = totalCost / mealCount;
+
+        
+        System.out.println("餐點數量：" + mealCount);
+        System.out.println("所有餐點的總費用：" + totalCost);
+        System.out.println("平均負擔費用：" + String.format("%.2f", averageCost));
+    }
+}
