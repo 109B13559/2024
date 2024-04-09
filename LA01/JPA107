@@ -1,20 +1,50 @@
-import java.util.Scanner;
-
 public class Hello {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    private int 動作;
+    private int 技巧;
+    private int 團隊表現;
 
-        System.out.println("請輸入一個字元:");
-        char ch = scanner.next().charAt(0);
-
-        boolean isEnglishLowerCase = ch >= 'a' && ch <= 'z';
-
-        if (isEnglishLowerCase) {
-            System.out.println("是英文小寫字母");
-        } else {
-            System.out.println("不是英文小寫字母");
-        }
+    public Score(int 動作, int 技巧, int 團隊表現) {
+        this.動作 = 動作;
+        this.技巧 = 技巧;
+        this.團隊表現 = 團隊表現;
     }
 
+    public int get動作() {
+        return 動作;
+    }
+
+    public void set動作(int 動作) {
+        this.動作 = 動作;
+    }
+
+    public int get技巧() {
+        return 技巧;
+    }
+
+    public void set技巧(int 技巧) {
+        this.技巧 = 技巧;
+    }
+
+    public int get團隊表現() {
+        return 團隊表現;
+    }
+
+    public void set團隊表現(int 團隊表現) {
+        this.團隊表現 = 團隊表現;
+    }
+
+    public int 計算總分() {
+        return 動作 + 技巧 + 團隊表現;
+    }
+
+    public static void main(String[] args) {
+        Score 籃球 = new Score(1, 2, 3);
+        int 籃球總分 = 籃球.計算總分();
+        System.out.println("籃球總分: " + 籃球總分);
+
+        Score 棒球 = new Score(10, 2, 3);
+        int 棒球總分 = 棒球.計算總分();
+        System.out.println("棒球總分: " + 棒球總分);
+    }
 }
