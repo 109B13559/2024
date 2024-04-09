@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Hello {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // 輸入兩個整數
+        System.out.print("Input two integers: ");
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+
+        // 計算最大公因數
+        int gcd = gcd(num1, num2);
+
+        // 輸出結果
+        System.out.println("The greatest common divisor of " + num1 + " and " + num2 + " is " + gcd);
+    }
+
+    private static int gcd(int num1, int num2) {
+        // 使用輾轉相除法計算最大公因數
+        while (num2 != 0) {
+            int temp = num2;
+            num2 = num1 % num2;
+            num1 = temp;
+        }
+        return num1;
+    }
+}
