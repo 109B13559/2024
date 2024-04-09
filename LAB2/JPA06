@@ -1,0 +1,20 @@
+public class Hello {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        while (true) {
+            System.out.print("Input an integer: ");
+            int number = scanner.nextInt();
+
+  
+
+            if (number % 2 == 0 && number % 3 == 0 && number % 6 == 0 && number % 9 == 0) {
+                System.out.println("The number is divisible by 2, 3, 6, and 9.");
+            } else {
+                System.out.println("The number is not divisible by 2, 3, 6, and 9.");
+            }
+        }
+    }
+}
