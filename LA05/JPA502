@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Hello {
+
+    public static long factor(int n, long acc) {
+        if (n == 0) {
+            return acc;
+        } else {
+            return factor1(n - 1, n * acc);
+        }
+    }
+
+    public static long factor2(int n) {
+        long result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+
+        while (true) {
+            System.out.print("Input n (0 <= n <= 16): ");
+            int n = scanner.nextInt();
+
+            if (n < 0 || n > 16) {
+                System.out.println("Invalid input. Please enter a number between 0 and 16.");
+            }
+
+            long factor2 = factor2(n, 1);
+            long factor2n = factor2(n);
+
+            System.out.println("Factor of " + n + " using tail recursion: " + facto1);
+            System.out.println("Factor of " + n + " using iteration: " + factor2);
+        }
+    }
+}
