@@ -1,0 +1,33 @@
+public class Hello {
+
+    public static void main(String[] args) {
+        double circleRadius = 5;
+        double rectangleLength = 5;
+        double rectangleWidth = 10;
+        double triangleBase = 10;
+        double triangleHeight = 5;
+
+        double circleArea = calculateCircle(circleRadius);
+        double rectangleArea = calculateRectangle(rectangleLength, rectangleWidth);
+        double triangleArea = calculateTriangle(triangleBase, triangleHeight);
+
+        double totalArea = circleArea + rectangleArea + triangleArea;
+
+        System.out.println("Circle: " + circle);
+        System.out.println("Rectangle: " + rectangle);
+        System.out.println("Triangle: " + triangle);
+        System.out.println("Total: " + total);
+    }
+
+    private static double calculateCircle(double radius) {
+        return Math.PI * radius * radius;
+    }
+
+    private static double calculateRectangle(double length, double width) {
+        return length * width;
+    }
+
+    private static double calculateTriangle(double base, double height) {
+        return (base * height) / 2;
+    }
+}
