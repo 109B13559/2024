@@ -1,0 +1,17 @@
+public class Sum2 {
+
+    public static int sum2(int n) {
+        if (n == 1) {
+            return 2;
+        } else {
+            return sum2(n - 1) + 2 * n;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input n: ");
+        int n = scanner.nextInt();
+        System.out.println("ans: " + sum2(n));
+    }
+}
